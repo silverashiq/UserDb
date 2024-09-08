@@ -12,7 +12,7 @@ exports.getAllUsers= async (req, res) => {
 
 exports.createUser= async (req, res) => {
     try{
-        const {firstName, lastName, userName, email, password, termsAccepted,} = req.body
+        const {firstName, lastName, userName, email, password, termsAccepted} = req.body;
         const user= new User({
             firstName,
             lastName,
@@ -20,10 +20,10 @@ exports.createUser= async (req, res) => {
             email,
             password,
             termsAccepted,
-            profilePicture: req.file.path
-        })
+            profilePicture: req.file.path,
+        });
         await user.save();
-        return res.send(user);
+        res.send(user);
     } catch (error){
         console.log(error);
     }
