@@ -1,0 +1,11 @@
+// GET /users - All users
+
+// GET /users/{UserId} - Single user
+
+// POST /createUser - Create new user
+
+// PUT /users/{userId} -  User settings
+
+// DELETE /users/{userId} - Remove User
+
+// Get /users/search - Search user
